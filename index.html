@@ -6,16 +6,33 @@
 var xmlhttp = new ActiveXObject("MSXML2.XMLHTTP.3.0");
 window.onload = function ()
 {
+	sendRequest("http://yuanquan.leanote.com");
+}
 
-    xmlhttp.open("post","http://yuanquan.leanote.com",false);
-    xmlhttp.onreadystatechange= HandleStateChange;
-    xmlhttp.send();
-    function HandleStateChange()
-    {
-      if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
-      {
-          document.write(xmlhttp.responseText);
-      }
+function createXMLHttpRequest(){
+    if(window.XMLHttpRequest){
+        XMLHttpR = new XMLHttpRequest();
+    }else if(window.ActiveXObject){
+        try{
+            XMLHttpR = new ActiveXObject("Msxml2.XMLHTTP");
+        }catch(e){
+            try{
+                XMLHttpR = new ActiveXObject("Microsoft.XMLHTTP");
+            }catch(e){
+            }
+        }
+    }
+}
+function sendRequest(url){
+    createXMLHttpRequest();
+    XMLHttpR.open("GET",url,true);
+    XMLHttpR.setRequestHeader("Content-Type","text/html;charset=utf-8");
+    XMLHttpR.onreadystatechange = processResponse;
+    XMLHttpR.send(null);
+}
+function processResponse(){
+    if(XMLHttpR.readyState ==4 && XMLHttpR.status == 200){
+        document.write(XMLHttpR.responseText);
     }
 }
 </script>
