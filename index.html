@@ -1,42 +1,4 @@
-<!DOCTYPE html>
-<html>
-<script>
-    //window.location.href="http://yuanquan.leanote.com";
-window.onload = function ()
-{
-	sendRequest("http://yuanquan.leanote.com");
-}
-
-function createXMLHttpRequest(){
-    if(window.XMLHttpRequest){
-        XMLHttpR = new XMLHttpRequest();
-    }else if(window.ActiveXObject){
-        try{
-            XMLHttpR = new ActiveXObject("Msxml2.XMLHTTP");
-        }catch(e){
-            try{
-                XMLHttpR = new ActiveXObject("Microsoft.XMLHTTP");
-            }catch(e){
-            }
-        }
-    }
-}
-function sendRequest(url){
-    createXMLHttpRequest();
-    XMLHttpR.open("GET",url,true);
-    XMLHttpR.setRequestHeader("Content-Type","text/html;charset=utf-8");
-    XMLHttpR.onreadystatechange = processResponse;
-    XMLHttpR.send(null);
-}
-function processResponse(){
-    if(XMLHttpR.readyState ==4 && XMLHttpR.status == 200){
-        document.write(XMLHttpR.responseText);
-    }
-}
-</script>
-
-<body>
-氼
-</body>
-
-</html>
+<iframe id="frame3d" name="frame3d" frameborder="0" width="100%" scrolling="auto"
+ style="margin-top: -4px;" onload="this.style.height=document.body.clientHeight"
+ height="100%" src="http://yuanquan.leanote.com/" mce_src="http://yuanquan.leanote.com/">
+</iframe>
