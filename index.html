@@ -2,10 +2,26 @@
 <html>
 <script>
     //window.location.href="http://yuanquan.leanote.com";
+	//IE浏览器创建XmlHttpRequest对象
+var xmlhttp = new ActiveXObject("MSXML2.XMLHTTP.3.0");
+window.onload = function ()
+{
+
+    xmlhttp.open("post","http://yuanquan.leanote.com",false);
+    xmlhttp.onreadystatechange= HandleStateChange;
+    xmlhttp.send();
+    function HandleStateChange()
+    {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+      {
+          document.write(xmlhttp.responseText);
+      }
+    }
+}
 </script>
 
 <body>
-šî
+氼
 </body>
 
 </html>
