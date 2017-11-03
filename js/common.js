@@ -15,10 +15,10 @@ $(function () {
 
     setTimeout(function() {
         _init();
-    }, str.length * 100);
+    }, str.length * 5000);
 	 function _init(){
         //隐藏loading页面
-        $('.loading_typewriter').fadeOut(5000);
+        $('.loading_typewriter').fadeOut(1000);
 		window.location="my_page.html";
 	 }
 });
