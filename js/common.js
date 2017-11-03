@@ -15,7 +15,7 @@ $(function () {
 
     setTimeout(function() {
         _init();
-    }, str.length * 5000);
+    }, str.length * 100);
 	 function _init(){
         //Òþ²ØloadingÒ³Ãæ
         $('.loading_typewriter').fadeOut(1000);
