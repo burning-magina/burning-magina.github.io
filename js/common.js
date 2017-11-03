@@ -1,14 +1,14 @@
-/*æ‰§è¡Œäº‹ä»¶*/
+/*Ö´ĞĞÊÂ¼ş*/
 $(function () {
 
-    // æ‰“å­—æœºæ•ˆæœ
-    var str = 'ä½ å¥½!\n';
+    // ´ò×Ö»úĞ§¹û
+    var str = 'ÄãºÃ!\n';
     str += 'nice to meet you!\n';
-    str += 'æˆ‘æ˜¯åªæ‡’çŒ«~\n';
-    str += 'æœ‰æ—¶å€™ä¹Ÿæ˜¯å°ç™½é¼ - -\n';
-	str += 'ä½ çš„æƒ…è°Šï¼Œæˆ‘ä¸ä¼šæ‹’ç»(Ë‡3Ë‡)\n';
-	str += 'æˆ‘ä¹Ÿæ„¿æ„é™ªä¼´åœ¨ä½ èº«è¾¹~\n';
-    str += 'æ¬¢è¿ä½ !';
+    str += 'ÎÒÊÇÖ»ÀÁÃ¨~\n';
+    str += 'ÓĞÊ±ºòÒ²ÊÇĞ¡°×Êó- -\n';
+	str += 'ÄãµÄÇéÒê£¬ÎÒ²»»á¾Ü¾ø(¡¦3¡¦)\n';
+	str += 'ÎÒÒ²Ô¸ÒâÅã°éÔÚÄãÉí±ß~\n';
+    str += '»¶Ó­Äã!';
     Printer.init(str, {
         selector: 'text_typewriter'
     }).print();
@@ -17,7 +17,7 @@ $(function () {
         _init();
     }, str.length * 5000);
 	 function _init(){
-        //éšè—loadingé¡µé¢
+        //Òş²ØloadingÒ³Ãæ
         $('.loading_typewriter').fadeOut(1000);
 		window.location="my_page.html";
 	 }

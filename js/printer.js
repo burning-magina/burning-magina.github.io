@@ -8,15 +8,15 @@
 	var Printer = {};
 	Printer.printer = {"version": "0.0.1"};
 	var init_options = {
-		"speed" : 100,		//æ–‡å­—çš„é€Ÿåº¦
-		"selector" : 'canvas',		//è¦æ‰“å°åˆ°çš„æ ‡ç­¾çš„ID			
-		"startIndex" : 0,		//ä»ç¬¬å‡ ä¸ªå­—ç¬¦å¼€å§‹æ‰“å°
-		"endIndex" : 0,		//æ‰“å°åˆ°ç¬¬å‡ ä¸ªå­—ç¬¦ç»“æŸ
-		"hasCur" : true,		//æ˜¯å¦æœ‰å…‰æ ‡
-		"curId" : 'cur',		//å…‰æ ‡çš„ID
-		"curStr" : '|',		//å…‰æ ‡å­—ç¬¦
-		"curStyle" : 'font-weight: bold;',	//å…‰æ ‡çš„æ ·å¼ï¼ˆCSSæ ·å¼ï¼‰
-		"curSpeed" : 500,		//å…‰æ ‡çš„é€Ÿåº¦ï¼ˆmsï¼‰
+		"speed" : 100,		//ÎÄ×ÖµÄËÙ¶È
+		"selector" : 'canvas',		//Òª´òÓ¡µ½µÄ±êÇ©µÄID			
+		"startIndex" : 0,		//´ÓµÚ¼¸¸ö×Ö·û¿ªÊ¼´òÓ¡
+		"endIndex" : 0,		//´òÓ¡µ½µÚ¼¸¸ö×Ö·û½áÊø
+		"hasCur" : true,		//ÊÇ·ñÓĞ¹â±ê
+		"curId" : 'cur',		//¹â±êµÄID
+		"curStr" : '|',		//¹â±ê×Ö·û
+		"curStyle" : 'font-weight: bold;',	//¹â±êµÄÑùÊ½£¨CSSÑùÊ½£©
+		"curSpeed" : 500,		//¹â±êµÄËÙ¶È£¨ms£©
 		"lnStr": ""
 	};
 
@@ -38,7 +38,7 @@
 	}
 
 
-	Printer.print = function(callback){	//æ‰“å°å‡½æ•°
+	Printer.print = function(callback){	//´òÓ¡º¯Êı
 		for(var i=0; i<str.length; i++) {
 			(function(index){
 				setTimeout(function(){	
@@ -65,12 +65,12 @@
 		}, options.speed * str.length);
 	}
 
-	function flwCur(){	//è·Ÿéšå…‰æ ‡
+	function flwCur(){	//¸úËæ¹â±ê
 		dom.innerHTML += '<span id="'+options.curId+'" style="'+options.curStyle+'">'+options.curStr+'</span>';
 		flwCurTimer = setTimeout(flwCur, 1.5 * options.speed);
 	}
 
-	function chCur(){	//é—ªçƒå…‰æ ‡
+	function chCur(){	//ÉÁË¸¹â±ê
 		curObj.innerHTML = curSwitch ? options.curStr : "";
 		curSwitch = !curSwitch
 	}
