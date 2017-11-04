@@ -21,6 +21,6 @@ $(function () {
 	 function _init(){
         //隐藏loading页面
         $('.loading_typewriter').fadeOut(1000);
-		window.location="my_page.html";
+		window.location="pages/my_page.html";
 	 }
 });

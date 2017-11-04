@@ -234,3 +234,8 @@ i { font-size: 16px; }
 .carousel-control i { font-size: 16px; }
 .carousel-control:hover,.tip_area_close:hover { background-color: rgba(0,0,0,0.6); }
 .carousel-control:active,.tip_area_close:active { background-color: rgba(0,0,0,0.7); }
+
+canvas {
+	cursor: crosshair;
+	display: block;
+}
