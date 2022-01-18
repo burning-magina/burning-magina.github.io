@@ -9,7 +9,7 @@ $(function () {
 	str += '\n';
 	str += '\n';
 	str += '\n';
-    str += '欢迎你!\n';
+    str += '要和我一起流浪喵!\n';
 	str += '...........';
     Printer.init(str, {
         selector: 'text_typewriter'
